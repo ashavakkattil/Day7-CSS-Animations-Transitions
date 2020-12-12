@@ -1,0 +1,36 @@
+body {
+  background: #262626;
+}
+.box {
+  height: 200px;
+  width: 200px;
+  background: white;
+  /* Name of animation can be anything */
+  animation: my-animation;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  /* for the last state of the animation to remain as such. Give the value as initial if we want to revert to the original state */
+  animation-fill-mode: forwards;
+}
+@keyframes my-animation {
+  0% {
+    background: white;
+    border-radius: 0px;
+  }
+  25% {
+    background: red;
+    border-radius: 50% 0px 0px 0px;
+  }
+  50% {
+    background: blue;
+    border-radius: 50% 50% 0px 0px;
+  }
+  75% {
+    background: green;
+    border-radius: 50% 50% 50% 0px;
+  }
+  100% {
+    background: white;
+    border-radius: 50%;
+  }
+}
